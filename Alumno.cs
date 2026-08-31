@@ -14,4 +14,28 @@ public class Alumno
         Nota1 = nota1;
         Nota2 = nota2;
     }
+
+    public decimal Promedio()
+    {
+        decimal notasTotal = Nota1 + Nota2;
+        return notasTotal / 2.0m;
+    }
+
+    public bool EstaAprobado()
+    {
+        return Promedio() >= 6m;
+    }
+
+    public void SubirNota()
+    {
+        if (Nota1 < 10m)
+        {
+            Nota1++;
+        }
+
+        if (Nota2 < 10m)
+        {
+            Nota2++;
+        }
+    }
 }
