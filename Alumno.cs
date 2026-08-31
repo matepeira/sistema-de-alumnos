@@ -38,4 +38,9 @@ public class Alumno
             Nota2++;
         }
     }
+
+    public override string ToString()
+    {
+        return $"{Nombre} - {Legajo} - (Promedio: {Promedio()})";
+    }
 }
