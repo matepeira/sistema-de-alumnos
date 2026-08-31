@@ -1,7 +1,22 @@
 ﻿using SistemaDeAlumnos;
 
-Alumno alumnoUno = new Alumno("Martin Ventu", 2, 9.2m, 4.0m);
-Alumno alumnoDos = new Alumno("Jose Sanchez", 1, 8.0m, 9.0m);
+Alumno alumnoUno = new Alumno("Martin Ventu", 2);
+Alumno alumnoDos = new Alumno("Jose Sanchez", 1);
 
-Console.WriteLine(alumnoUno);
-Console.WriteLine(alumnoDos);
+if (alumnoUno.CargarNotas(9.2m, 4.0m))
+{
+    Console.WriteLine($"Notas cargadas correctamente para: {alumnoUno.Nombre}| {alumnoUno}");
+}
+else
+{
+    Console.WriteLine("No se pudieron cargar las notas, ingrese un valor valido");
+}
+
+if (alumnoDos.CargarNotas(47m, 8.0m))
+{
+    Console.WriteLine($"Notas cargadas correctamente para: {alumnoDos.Nombre}| {alumnoDos}");
+}
+else
+{
+    Console.WriteLine("No se pudieron cargar las notas, ingrese un valor valido");
+}
