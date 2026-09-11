@@ -1,15 +1,17 @@
-﻿namespace SistemaDeAlumnos;
+﻿using sistema_de_alumnos;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
-public class Alumno
+namespace SistemaDeAlumnos;
+
+public class Alumno: Persona
 {
-    public string Nombre { get; set; }
     public int Legajo { get; private set; }
     public decimal Nota1 { get; private set; }
     public decimal Nota2 { get; private set; }
 
-    public Alumno(string nombre, int legajo)
+    public Alumno(string nombre, int documento, int legajo)
+        : base ( nombre, documento)
     {
-        Nombre = nombre;
         Legajo = legajo;
     }
 

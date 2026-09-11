@@ -1,5 +1,8 @@
 ﻿using SistemaDeAlumnos;
 
+Alumno testAlumno = new Alumno("Carlos", 40123456, 101);
+Console.WriteLine(testAlumno.Nombre);
+
 List<Alumno> Alumnos = new List<Alumno>();
 bool continuar = true;
 
@@ -23,7 +26,10 @@ while (continuar)
 
             Console.Write("\nIngrese el nombre del alumno: ");
             string nombre = Console.ReadLine();
-            
+
+            Console.Write("Ingrese el documento: ");
+            int.TryParse(Console.ReadLine(), out int documento);
+
             Console.Write("Ingrese el legajo del alumno: ");
             int.TryParse(Console.ReadLine(), out int legajo);
 
@@ -49,7 +55,7 @@ while (continuar)
             Console.Write("Ingrese la Nota 2 (Decimales con coma) (0 a 10): ");
             decimal.TryParse(Console.ReadLine(), out decimal nota2);
 
-            Alumno nuevoAlumno = new Alumno(nombre, legajo);
+            Alumno nuevoAlumno = new Alumno(nombre, documento, legajo);
 
 
             if(nuevoAlumno.CargarNotas( nota1, nota2))
