@@ -9,4 +9,9 @@ public class Profesor : Persona
     {
         Materia = materia;
     }
+
+    public override string Presentarse()
+    {
+        return $"{ base.Presentarse()}, y dicto {Materia} ";
+    }
 }

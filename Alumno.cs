@@ -55,4 +55,9 @@ public class Alumno: Persona
     {
         return $"{Nombre} - {Legajo} - (Promedio: {Promedio()})";
     }
+
+    public override string Presentarse()
+    {
+        return $"{base.Presentarse()}, y mi legajo es {Legajo} ";
+    }
 }

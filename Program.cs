@@ -1,7 +1,17 @@
-﻿using SistemaDeAlumnos;
+﻿using sistema_de_alumnos;
+using SistemaDeAlumnos;
 
-Alumno testAlumno = new Alumno("Carlos", 40123456, 101);
-Console.WriteLine(testAlumno.Nombre);
+List<Persona> personas = new List<Persona>
+{
+    new Alumno("Ana Pérez", 47234567, 1234),
+    new Profesor("Marta Díaz", 30987654, "Programación"),
+    new Preceptor("Jose Lopez", 25994123, "5 B"),
+};
+
+foreach (Persona p in personas)
+{   
+    Console.WriteLine(p.Presentarse());
+}
 
 List<Alumno> Alumnos = new List<Alumno>();
 bool continuar = true;
